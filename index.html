@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Basketball Club Update</title>
+    <title>Science Club Members</title>
 
-    <!-- PyScript -->
     <link
         rel="stylesheet"
         href="https://pyscript.net/releases/2025.3.1/core.css"
@@ -36,6 +36,7 @@
 
         .container {
             width: 100%;
+            max-width: 600px;
             padding: 20px;
             border-radius: 18px;
             background-color: rgb(250, 242, 242);
@@ -48,7 +49,7 @@
 
         .header h1 {
             margin-bottom: 8px;
-            color: #1e3a8a;
+            color: #064e1c;
             font-size: 28px;
         }
 
@@ -79,7 +80,6 @@
 
         input:focus {
             border-color: #2563eb;
-         
         }
 
         button {
@@ -88,26 +88,26 @@
             border: none;
             border-radius: 8px;
             color: white;
-            background-color:  #dae109;
+            background-color: #064e1c;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: #dae109;
+            background-color: #0b6b2b;
         }
 
-        #output1 {
+        #result {
             min-height: 55px;
             margin-top: 22px;
             padding: 15px;
             border-radius: 8px;
-            text-align: center;
+            text-align: left;
             color: #1e293b;
             background-color: #f1f5f9;
-            font-weight: bold;
-            line-height: 1.5;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
         }
 
         .footer {
@@ -124,13 +124,12 @@
     <main class="container">
 
         <header class="header">
-            <h1>ICT Club Verification</h1>
-            <p>Check if you are part of the ICT Club.</p>
+            <h1>Science Club Members</h1>
+            <p>Add a student and view the complete club member list.</p>
         </header>
 
         <div class="form-group">
             <label for="first_name">First Name</label>
-
             <input
                 type="text"
                 id="first_name"
@@ -140,7 +139,6 @@
 
         <div class="form-group">
             <label for="last_name">Last Name</label>
-
             <input
                 type="text"
                 id="last_name"
@@ -148,17 +146,19 @@
             >
         </div>
 
-        <button py-click="verify_member">
-            Verify Member
+        <button py-click="add_members">
+            Add Member
         </button>
 
-        <div id="output1">
-            Your result will appear here.
+        <div id="result">
+            Your member list will appear here.
         </div>
+
+        <p class="footer">Science Club Member Management</p>
+
     </main>
 
     <script type="py" src="main.py"></script>
 
 </body>
-
 </html>
